@@ -1,0 +1,140 @@
+div.post{
+    border: dotted orange;
+    padding: 8px;
+    margin: 28px;
+  }
+
+  body {
+    background-color: #000;
+    font-family: monospace;
+    color: #0f0;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+  }
+
+  a{
+    color: yellow;
+  }
+  
+  h2{
+    color: yellow;
+    font-size: 28px;
+    text-decoration: underline;
+
+  }
+
+  p{
+    color: white;
+    font-size: 22px;
+  }
+  
+  h3{
+    color: orange;
+    font-size: 25px;
+    text-decoration: underline;
+  }
+
+  li{
+    font-weight: bolder;
+    font-size: 22px;
+    color: white;
+  }
+
+  pre {
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid #f00;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  #textLogo{
+    font-size:36px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 1443px) {
+    #asciiArt {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1443px) {
+    #textLogo {
+      display: none;
+    }
+  }
+  
+  .header-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    font-size: 20px;
+  }
+  
+  .header-list li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+  }
+  
+  /* Define the transition properties */
+  .header-list li a {
+    transition: color 0.5s ease;
+  }
+  
+  /* Add the hover effect */
+  .header-list li a:hover {
+    color: red;
+  }
+  
+  .post{
+    color: white;
+    padding: 20px;
+  }
+
+  footer {
+    font-size: 20px;
+    padding: 40px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -99999;
+  }
+
+/* Styles for error message */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Styles for success message */
+.success-message {
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Styles for the cat image */
+.cat-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries to adjust the cat image size */
+@media screen and (max-width: 768px) {
+  .cat-image {
+    width: 50%; /* Adjust the width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cat-image {
+    width: 30%; /* Adjust the width for even smaller screens */
+  }
+}
