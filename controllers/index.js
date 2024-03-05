@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const { User, Post, Comment } = require('../models'); // Import the User, Post, and Comment models
 
-const { User, Post } = require('../models'); // Import the User and Post models
+// const { User, Post } = require('../models'); // Import the User and Post models
 
 // Define the associations
 User.hasMany(Post, {
