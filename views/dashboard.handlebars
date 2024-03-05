@@ -1,0 +1,25 @@
+<head>
+  <script src="/js/dashboard.js"></script>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<h2>My Blog Posts</h2>
+<ul>
+  {{#each posts}}
+    <li>
+      <h3><a href="/posts/{{this.id}}">{{title}}</a></h3>
+      <a href="#" class="edit-button" data-post-id="{{this.id}}">Edit</a>
+      <form action="/posts/{{this.id}}/delete" method="POST" class="delete-form">
+        <button type="submit" class="delete-button" data-post-id="{{this.id}}">Delete</button>
+      </form>
+      <div class="edit-form" id="edit-form-{{this.id}}" style="display: none;">
+        <form action="/posts/{{this.id}}/update" method="POST">
+          <input class="editBlogTitleInput" type="text" name="title" value="{{this.title}}">
+          <textarea name="content">{{content}}</textarea>
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+
+{{> createPostForm}}
